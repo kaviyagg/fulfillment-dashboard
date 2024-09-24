@@ -1,11 +1,8 @@
-:host {
+.sidebar-root {
+  position: relative;
   display: flex;
   height: 100%;
   width: 100%;
-}
-
-.nav-list {
-  padding: 0;
 }
 
 .menu-list-box {
@@ -16,6 +13,7 @@
 
 .list-button {
   display: flex;
+  align-items: center;
   gap: 1rem;
   width: 8rem;
 }

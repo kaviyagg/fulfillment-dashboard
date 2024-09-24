@@ -1,12 +1,7 @@
-<mat-toolbar color="primary">
 <app-topbar></app-topbar>
-</mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
-    <app-sidebar [(collapsed)]="collapsed"></app-sidebar>
-  </mat-sidenav>
-  <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
+<div class="sidenav-container">
+  <app-sidebar [(collapsed)]="collapsed" [style.width]="sidenavWidth()"></app-sidebar>
+  <div class="content">
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
+  </div>
+</div>

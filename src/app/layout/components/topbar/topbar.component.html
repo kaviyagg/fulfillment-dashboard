@@ -1,5 +1,13 @@
-    <img src="assets/icons/logo.svg" alt="logo">
-    <div class="list-button">
-      <mat-icon matListItemIcon svgIcon="admin"></mat-icon>
-      <span matListItemTitle>Admin</span>
+<p-toolbar styleClass="toolbar-root">
+  <ng-template pTemplate="start">
+    <img src="assets/icons/logo.svg" />
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div class="flex align-items-center gap-2">
+      <p-avatar image="assets/icons/admin-shield.svg" shape="circle" />
+      <span class="font-bold">
+        Admin
+      </span>
     </div>
+  </ng-template>
+</p-toolbar>

@@ -1,6 +1,7 @@
 <h2>Patients</h2>
 <div class="flex justify-content-between flex-wrap">
   <p-selectButton
+    severity="secondary"
     [options]="options"
     [(ngModel)]="value"
     optionLabel="name"
@@ -10,7 +11,7 @@
     <input type="text" pInputText placeholder="Search by Patient ID" [(ngModel)]="searchValue" />
   </span>
 </div>
-<p-table [value]="patients" [paginator]="true" [rows]="8" [scrollable]="true" scrollHeight="548px" [rowsPerPageOptions]="[8, 10, 12, 16]" responsiveLayout="scroll">
+<p-table [value]="patients" [paginator]="true" [rows]="8"  [rowsPerPageOptions]="[8, 10, 12, 16]" responsiveLayout="scroll">
   <ng-template pTemplate="header">
     <tr>
       <th>Patient ID</th>
