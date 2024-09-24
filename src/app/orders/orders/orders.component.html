@@ -1,0 +1,59 @@
+  <div class="flex justify-content-between flex-wrap">
+    <h2>Manage Your Orders</h2>
+    <!-- Search Bar -->
+    <span class="p-input-icon-left my-3">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText placeholder="Search by Patient ID" [(ngModel)]="searchQuery" />
+    </span>
+  </div>
+
+  <!-- Tab View -->
+  <p-tabView>
+    <p-tabPanel header="Place an Order">
+      <!-- Orders Table -->
+      <p-table [value]="filteredDevices"  [responsiveLayout]="'scroll'">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Device</th>
+            <th>Inventory</th>
+            <th>Quantity</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-device>
+          <tr>
+            <td>
+              <img [src]="device.image" alt="{{device.name}}" width="50" style="margin-right: 10px;">
+              {{ device.sku }} - {{ device.name }}
+            </td>
+            <td>{{ device.inventory }} in stock</td>
+            <td>
+              <p-inputNumber
+                [(ngModel)]="device.quantity"
+                [showButtons]="true"
+                [min]="0"
+                [max]="device.inventory"
+                buttonLayout="horizontal"
+                spinnerMode="horizontal"
+                inputId="horizontal"
+                incrementButtonIcon="pi pi-plus"
+                decrementButtonIcon="pi pi-minus" />
+              <!-- <p-progressSpinner [(ngModel)]="device.quantity" [min]="0" [max]="device.inventory"></p-progressSpinner> -->
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+      <!-- Place Order Button -->
+      <div class="place-order-button">
+        <button pButton type="button" label="Place Order" class="p-button-primary" (click)="placeOrder()"></button>
+      </div>
+    </p-tabPanel>
+
+    <p-tabPanel header="Order Tracking">
+      <p>Order tracking content here...</p>
+    </p-tabPanel>
+
+    <p-tabPanel header="Order History">
+      <p>Order history content here...</p>
+    </p-tabPanel>
+  </p-tabView>

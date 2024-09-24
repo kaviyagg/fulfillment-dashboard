@@ -1,0 +1,21 @@
+<div class="card">
+  <h2>Devices</h2>
+  <p-table [value]="devices" [paginator]="true" [rows]="9" [rowsPerPageOptions]="[5, 9, 15]" [responsiveLayout]="'scroll'">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Patient ID</th>
+        <th>Device</th>
+        <th>ICCID</th>
+        <th>MAC</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-device>
+      <tr>
+        <td><a href="#">{{ device.patientId }}</a></td>
+        <td>{{ device.device }}</td>
+        <td>{{ device.iccid }}</td>
+        <td>{{ device.mac }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-list {
+  padding: 0;
+}
+
+.menu-list-box {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.list-button {
+  display: flex;
+  gap: 1rem;
+  width: 8rem;
+}
+
+
+.side-drawer-trigger {
+  position: absolute;
+
+}
+
+.nav-button {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+::ng-deep .nav-p-button {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  background: white;
+}
+
+
+::ng-deep .p-listbox-custom  {
+  & .p-listbox-list {
+    padding: 0 0.5rem;
+    .p-listbox-item {
+      padding: 0.25rem 0.5rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+    }
+  }
+}
+

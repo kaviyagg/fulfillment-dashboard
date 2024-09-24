@@ -1,0 +1,18 @@
+<mat-nav-list class="nav-list">
+  <p-listbox class="menu-list-box" [options]="menuItems()" [(ngModel)]="selectedItem" optionLabel="name"
+    [style]="navWidth()" listStyleClass="p-listbox-custom" [listStyle]="{'max-height': '100vh', 'padding-top': '2.5rem'}">
+    <ng-template let-item pTemplate="item">
+      <div class="p-2" mat-list-item [routerLink]="item.route">
+        <div class="list-button">
+          <mat-icon matListItemIcon svgIcon="{{item.icon}}"></mat-icon>
+          @if (collapsed() === false) {
+          <span matListItemTitle>{{ item.label }}</span>
+          }
+        </div>
+      </div>
+    </ng-template>
+  </p-listbox>
+</mat-nav-list>
+
+<p-button [icon]="collapsed() ?'pi pi-angle-right': 'pi pi-angle-left'" class="nav-button" [rounded]="true" [text]="true" [raised]="true"
+  (click)="collapsed.set(!collapsed())" styleClass="nav-p-button" />

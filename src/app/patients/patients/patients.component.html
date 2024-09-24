@@ -1,0 +1,36 @@
+<h2>Patients</h2>
+<div class="flex justify-content-between flex-wrap">
+  <p-selectButton
+    [options]="options"
+    [(ngModel)]="value"
+    optionLabel="name"
+    optionValue="value" />
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input type="text" pInputText placeholder="Search by Patient ID" [(ngModel)]="searchValue" />
+  </span>
+</div>
+<p-table [value]="patients" [paginator]="true" [rows]="8" [scrollable]="true" scrollHeight="548px" [rowsPerPageOptions]="[8, 10, 12, 16]" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Patient ID</th>
+      <th>Last Connection Time</th>
+      <th>Last Signal Strength</th>
+      <th>Last Device to Connect</th>
+      <th>Status</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-patient>
+    <tr>
+      <td>{{ patient.patientId }}</td>
+      <td>{{ patient.lastConnectionTime }}</td>
+      <td>{{ patient.lastSignalStrength }}</td>
+      <td>{{ patient.lastDeviceToConnect }}</td>
+      <td>
+        <span [ngClass]="{'active-status': patient.status === 'Active', 'inactive-status': patient.status === 'Inactive'}">
+          {{ patient.status }}
+        </span>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
