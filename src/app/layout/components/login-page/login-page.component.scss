@@ -1,0 +1,87 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/assets/login-images/login-background.jpg');
+  background-repeat: no-repeat;
+  width:100%;
+  background-size: cover;
+  background-position: 100% 80%;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38.6vw;
+  height: 25.44vw;
+  max-width: 741px;
+  max-height: 487px;
+  min-width: 400px;
+  min-height:487px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 3rem;
+  border-radius: 10px;
+  border:2px solid #FFFFFF;
+}
+.content {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  padding:1.5rem 0rem;
+}
+.logo {
+  max-width: 152px;
+  min-width:130px;
+  width:7.92vw;
+  padding-bottom:2.5rem;
+}
+
+.forgot-password a {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #2C4052 !important;
+}
+a {
+  text-decoration: none;
+}
+
+.input-field {
+  width: 335px !important;
+  height: 48px !important;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+:host ::ng-deep .p-password input {
+  width: 21rem !important;
+  height: 48px !important;
+}
+
+.submit-button {
+padding-top:2rem;
+padding-bottom:1rem;
+}
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+.p-error {
+ position: absolute;
+ display:block;
+ padding: 5px;
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    background-position: center;
+  }
+}
+.p-button {
+  color: #ffffff;
+  background: #2C4052 !important;
+  border: #2C4052 !important;
+}
+
