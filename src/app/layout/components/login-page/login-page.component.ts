@@ -5,6 +5,8 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { ButtonModule } from 'primeng/button';
 import { catchError, of } from 'rxjs';
 import { PasswordModule } from 'primeng/password';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login-page',
   standalone: true,
@@ -16,7 +18,9 @@ export class LoginPageComponent {
     private formBuilder = inject(FormBuilder);
     private http = inject(HttpClient);
     loginForm!: FormGroup;
+    emailId = `connect@me.health`;
     emailValidator = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    constructor(private router: Router) {}
     ngOnInit(): void {
       this.loginForm = this.initializeForm();
     }
@@ -40,7 +44,8 @@ export class LoginPageComponent {
           )
           .subscribe((res: any) => {
             if (res) {
-              alert('Login success');
+              this.router.navigate(['/layout']);
+
             } else {
               alert('Invalid credentials or login failed.');
             }
