@@ -1,7 +1,7 @@
 <app-topbar></app-topbar>
-<div class="sidenav-container">
-  <app-sidebar [(collapsed)]="collapsed" [style.width]="sidenavWidth()"></app-sidebar>
-  <div class="content">
+<div class="sidenav-container" [ngClass]="{'sider': showSidebar}">
+  <app-sidebar *ngIf="showSidebar()" [(collapsed)]="collapsed" [style.width]="sidenavWidth()"></app-sidebar>
+  <div class="content" [ngClass]="{'show-side-bar': showSidebar}">
     <router-outlet></router-outlet>
   </div>
 </div>

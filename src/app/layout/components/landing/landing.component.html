@@ -1,0 +1,16 @@
+<div class="landing-page-image">
+<div class="landing-content">
+<div class="landing-header-text">
+  Health Devices & Solutions for Remote Patient Monitoring Applications
+</div>
+<div class="container">
+  <div *ngFor="let item of menuItems()" class="card-container">
+    <p-card class="dashboard-card">
+        <mat-icon class="card-icon"svgIcon="{{item.icon}}"></mat-icon>
+    </p-card>
+    <span class="card-title">{{ item.label }}</span>
+  </div>
+</div>
+</div>
+<div class="footer-text">© 2024 My Everyday Health | Email: <a class="email-text"[href]="'mailto:'+emailId"> {{emailId}}</a></div>
+</div>

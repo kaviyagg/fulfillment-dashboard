@@ -1,0 +1,95 @@
+.landing-page-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url('/assets/landing-image/landing-background.jpg');
+  background-repeat: no-repeat;
+  width:100%;
+  background-size: cover;
+  background-position: 100% 80%;
+}
+.landing-content {
+ width:40.34375vw;
+ height:31.927083333333332vw;
+ max-width: 717px;
+ max-height: 613px;
+ min-width: 665px;
+ min-height: 568px;
+}
+.email-text {
+  color: #191A1A;
+}
+.footer-text {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #191A1A;
+}
+.landing-header-text {
+ font-size: 45px;
+ font-weight: 700;
+ line-height: 60px;
+ text-align: center;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+}
+.card-container {
+ text-align: center;
+}
+
+:host ::ng-deep .p-card-body {
+  width:100% !important;
+  height:100% !important;
+}
+
+:host ::ng-deep .p-card-content {
+  width:100% !important;
+  height:100% !important;
+}
+
+:host ::ng-deep .p-card {
+  width: 8vw !important;
+  height: 6vw !important;
+  min-height:120px;
+  min-width:150px;
+  background-color:#A8D9D6;
+  border-radius: 20px;
+}
+.card-title {
+ color: #090D11;
+ font-size: 18px;
+ font-weight: 600;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+.card-icon {
+ height:100%;
+ width:100%;
+}
+:host ::ng-deep .card-icon {
+  svg {
+    width: 2.604vw !important;
+    min-width: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .landing-content {
+
+  }
+}

@@ -4,6 +4,7 @@ import { DevicesComponent } from './devices/devices/devices.component';
 import { OrdersComponent } from './orders/orders/orders.component';
 import { LoginPageComponent } from './layout/components/login-page/login-page.component';
 import { LayoutComponent } from './layout/layout.component';
+import { LandingComponent } from './layout/components/landing/landing.component';
 
 
 export const routes: Routes = [
@@ -23,7 +24,11 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'patients'
+        redirectTo: 'landing'
+      },
+      {
+        path: 'landing',
+        component: LandingComponent
       },
       {
         path: 'patients',
